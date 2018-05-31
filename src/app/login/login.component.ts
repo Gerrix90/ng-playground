@@ -1,6 +1,6 @@
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

@@ -5,6 +5,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -48,7 +49,9 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
+  
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [AuthService, AuthGuard, UserService, AdminAuthGuard, CategoriesService],
