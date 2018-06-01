@@ -1,3 +1,8 @@
+<!-- Make a form control object for each input field:
+Returns as a json object and send to firebase -->
+
+<!-- Using ngModel directive (need to import the FormsModule) -->
+
 <div class="container">
     <div id="productform">
         <form #f="ngForm" (ngSubmit)="save(f.value)">

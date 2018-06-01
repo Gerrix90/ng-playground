@@ -1,18 +1,19 @@
+import { ProductService } from './product.service';
 import { CategoriesService } from './categories.service';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { UserService } from './user.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { environment } from '../environments/environment';
@@ -45,16 +46,15 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     MDBBootstrapModule.forRoot(),
-    FormsModule,
-  
-  ],
+   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [AuthService, AuthGuard, UserService, AdminAuthGuard, CategoriesService],
+  providers: [AuthService, AuthGuard, UserService, AdminAuthGuard, CategoriesService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
