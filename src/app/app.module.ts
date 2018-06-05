@@ -1,3 +1,4 @@
+
 import { ProductService } from './product.service';
 import { CategoriesService } from './categories.service';
 import { AdminAuthGuard } from './admin-auth-guard.service';
@@ -13,6 +14,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -27,6 +29,9 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { PostsComponent } from './http/posts/posts.component';
 
 
 @NgModule({
@@ -42,7 +47,10 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ZippyComponent,
+    ContactFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +60,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     MDBBootstrapModule.forRoot(),
+    HttpClientModule
    ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [AuthService, AuthGuard, UserService, AdminAuthGuard, CategoriesService, ProductService],
