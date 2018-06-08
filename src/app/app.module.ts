@@ -32,6 +32,9 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PostsComponent } from './http/posts/posts.component';
+import { NavagationComponent } from './navagation/navagation.component';
+import { BlogComponent } from './navagation/blog/blog.component';
+
 
 
 @NgModule({
@@ -50,8 +53,10 @@ import { PostsComponent } from './http/posts/posts.component';
     ProductFormComponent,
     ZippyComponent,
     ContactFormComponent,
-    PostsComponent
-  ],
+    PostsComponent,
+    NavagationComponent,
+    BlogComponent,
+   ],
   imports: [
     BrowserModule,
     FormsModule,

@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>
+        My BLOG Page</h1>
+    <ul>
+        <li *ngFor="let blog of blogs">
+            <a [routerLink]="['/blog', blog.year, blog.month]">{{ blog.year + '/' + blog.month }}</a>
+        </li>
+    </ul>
+</div>

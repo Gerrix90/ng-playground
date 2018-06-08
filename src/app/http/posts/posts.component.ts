@@ -22,7 +22,7 @@ export class PostsComponent  {
       // Post and save to the server
         createPost(input: HTMLInputElement) {
       const post: any = { title: input.value };
-     input.value = ' ';
+     input.value = '';
      this.http.post(this.url, JSON.stringify(post))
           .subscribe((response: any) => {
            // post.id = response.id;
