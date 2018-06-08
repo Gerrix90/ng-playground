@@ -7,12 +7,12 @@
 ## routerLink
 ### for simple routes 
 ```html
-<a routerLink="/home">HOME</a>
+<a routerLink="/home">Home</a>
 ```
 ## routerLinkActive 
 ### directive & class
 ```html 
-<li routerLinkActive="active current"><a routerLink="/home">HOME</a>
+<li routerLinkActive="active current"><a routerLink="/home">Home</a>
 ```
 ## Route parameters array
 ### when dealing with route parameters we use [property binding] to bind to an expression
