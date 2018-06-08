@@ -17,9 +17,10 @@ categories$;
   }
 // create(product) to product.service.ts
  save(product) {
-   this.productService.create(product);
+    this.productService.create(product);
+   // console.log(product);
  }
-
-  ngOnInit() {
+ 
+ngOnInit() {
   }
 }

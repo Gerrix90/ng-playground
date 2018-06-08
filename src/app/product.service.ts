@@ -12,6 +12,8 @@ export class ProductService {
 
   // From the product-form.component we push into firebase
      create(product) {
-       return this.db.list('/products').push('product');
-       }
+        return this.db.list('/products').push('product');
+       // console.log(product);
+       } 
+       
 }

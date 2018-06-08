@@ -7,10 +7,10 @@ Returns as a json object and send to firebase -->
     <div id="productform">
         <form #f="ngForm" (ngSubmit)="save(f.value)">
             <div class="md-form form-group">
-                <label for="title">Title</label>
+                <label for="title">Title</label><br>
                 <input ngModel name="title" id="title" type="text" class="form-control">
             </div>
-            <label for="price">Price</label>
+            <label for="price">Price</label><br>
             <div class="md-form input-group">
 
                 <div class="input-group-prepend">
@@ -19,15 +19,15 @@ Returns as a json object and send to firebase -->
                 <input ngModel name="price" id="price" type="number" class="form-control">
             </div>
             <div class="md-form form-group">
-                <label for="category">Category</label>
-                <select ngModel name="categories.category" id="category" class="form-control">
+                <label for="category">Category</label><br>
+                <select ngModel name="category" id="category" class="form-control">
       <option value=""></option>
       <option *ngFor="let c of categories$ | async" [value]="c.$key">{{ c.name }}</option>
       </select>
             </div>
             <div class="md-form form-group">
-                <label for="imageUrl">Image Url</label>
-                <input ngModel name="categories.imageUrl" id="imageUrl" type="text" class="form-control">
+                <label for="imageUrl">Image Url</label><br>
+                <input ngModel name="imageUrl" id="imageUrl" type="text" class="form-control">
             </div>
             <button class="btn btn-primary">Save</button>
         </form>

@@ -31,6 +31,7 @@ export class AuthService {
   this.afAuth.auth.signOut();
  }
 
+// The rxjs switchMap operator/cancell and the new observable is subscribed 
  get appUser$(): Observable<AppUser> {
     return this.user$
     .switchMap(user => {
