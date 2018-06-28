@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.css"
+
+/* @import "~bootstrap/dist/css/bootstrap.css" */
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #37474F;
+    border-color: #263238;
+}

@@ -1,0 +1,48 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+    <!-- Navbar brand -->
+    <logo><a class="navbar-brand" routerLink="/">eSHOP</a></logo>
+
+    <!-- Collapsible content -->
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <!-- SHOPPING CART BUTTON -->
+            <button routerLink="/shopping-cart" *ngIf="cart$ | async as cart" class="btn btn-danger btn-sm btn-waves-light pull-right" mdbWavesEffect>
+                        Cart {{ cart.totalItemsCount }} <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+            <!-- Login -->
+            <ng-template #anonymousUser>
+                <a class="nav-link" routerLink="/login" mdbWavesEffect><i class="fa fa-external-link" aria-hidden="true"></i> Login</a>
+            </ng-template>
+        </ul>
+        <ul>
+            <!-- Dropdown Login -->
+            <li class="nav-item dropdown" dropdown *ngIf="appUser; else anonymousUser">
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+              {{ appUser.name }}<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/my/orders">My Orders</a>
+                    <ng-container *ngIf="appUser.isAdmin">
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/admin/orders">Manage Orders</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="admin/products">Manage Products</a>
+                    </ng-container>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" (click)="logout()" mdbWavesEffect>Log Out</a>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Links -->
+
+        <!-- Search form 
+        <form class="form-inline waves-light" mdbWavesEffect>
+            <div class="md-form mt-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </div>
+        </form>  -->
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->

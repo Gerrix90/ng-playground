@@ -1,0 +1,22 @@
+<!-- Displays the CARD -->
+<div *ngIf="product.title" class="card">
+
+    <!--Card image-->
+    <img *ngIf="product.imgUrl" class="img-fluid" [src]="product.imgUrl" alt="{{ product.title }}">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">{{ product.title }}</h4>
+        <!--Text-->
+        <p class="card-text">{{ product.price | currency:'AUD'}}</p>
+
+
+        <div *ngIf="showActions && shoppingCart" class="card-footer">
+            <button *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity" (click)="addToCart()" class="btn btn-blue-grey btn-block waves-light" mdbWavesEffect>Add to Cart</button>
+            <ng-template #updateQuantity>
+                <app-product-quantity [product]="product" [shoppingCart]="shoppingCart"></app-product-quantity>
+            </ng-template>
+        </div>
+    </div>
+</div>

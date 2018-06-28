@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h2>Your Shopping Cart</h2>
+    <!--Unrawp the observable -->
+    <ng-container *ngIf="cart$ | async as cart">
+        <p>You have {{ cart.totalItemsCount }} items in your shopping cart. </p>
+        <div class="card">
+            <table class="table">
+                <thead>
+                    <th></th>
+                    <th>ITEM</th>
+                    <th class="text-center" style="width: 230px">QTY</th>
+                    <th class="text-right" style="width: 200px">SUB TOTAL</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cart.items">
+                        <td>
+                            <div [style.backgroundImage]="'url(' + item.imgUrl + ')'" class="thumbnail">
+                            </div>
+                        </td>
+                        <td>
+                            {{ item.title }}
+                        </td>
+                        <td>
+                            <!-- Add the component to dispaly - + buttons -->
+                            <app-product-quantity [product]="item" [shoppingCart]="cart"></app-product-quantity>
+                        </td>
+                        <td class="text-right">{{ item.totalPrice | currency: 'AUD' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th class="text-right" style="font-weight: 400">Total (incl.delivery)</th>
+                        <th class="text-right" style="font-weight: 400 !important"> {{ cart.totalPrice | currency: 'AUD' }}</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <a routerLink="/check-out" *ngIf="cart.items.length" (click)="clearCart()" class="btn btn-danger btn-sm">Checkout <i class="fa fa-mail-forward" aria-hidden="true"></i></a>
+    </ng-container>
+</div>
