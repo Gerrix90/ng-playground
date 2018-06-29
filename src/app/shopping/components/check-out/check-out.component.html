@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <div class="col-md-12  col-sm-12  col-xs-8 " style="background:#fff; padding:30px;">
+        <h2>Shipping</h2>
+        <div class="row" *ngIf="cart$ | async as cart">
+            <div class="col-6">
+                <!-- Rendering the shipping-form.component Passing cart as an @Input property-->
+                <app-shipping-form [cart]="cart"></app-shipping-form>
+            </div>
+            <div class="col-6">
+                <!-- Set the cart input property to the cart field from the check-out.component -->
+                <app-shopping-cart-summary [cart]="cart"></app-shopping-cart-summary>
+            </div>
+        </div>
+    </div>
+</div>

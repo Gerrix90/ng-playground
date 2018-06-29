@@ -1,0 +1,29 @@
+<div class="form-container">
+
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+        <img src="assets/images/lock.svg" id="lock">
+        <h2>Secure</h2><br>
+        <h4>Sign up</h4>
+        <div class="form-group">
+
+            <input #name="ngModel" name="email" [(ngModel)]="shipping.email" type="text" class="form-control" required placeholder="email@address.com">
+            <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+                <div *ngIf="name.errors.required">Email address is required.</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+
+            <input #name="ngModel" name="password" [(ngModel)]="shipping.password" type="text" class="form-control" placeholder="Password" required>
+
+            <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+                <div *ngIf="name.errors.required">Password is required.</div>
+            </div>
+        </div>
+        <br>
+        <button [disabled]="!signupForm.valid" class="btn btn-danger">SIGN UP <i class="fa fa-arrow-right"></i></button>
+
+
+        <button id="google" (click)="login()" class="btn btn-primary"><i class="fa fa-google" aria-hidden="true"></i>    Login with Google</button><br>
+    </form>
+</div>

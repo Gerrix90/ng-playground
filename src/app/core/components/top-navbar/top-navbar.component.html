@@ -1,0 +1,63 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg elegant-color-dark">
+    <links>
+        <!-- SOCIAL MEDIA ICONS -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item waves-light" mdbWavesEffect>
+                <a href="https://www.facebook.com/oohlalava" class="nav-link"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="nav-item waves-light" mdbWavesEffect>
+                <a href="https://www.twitter.com/oohlalava" class="nav-link"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="nav-item waves-light" mdbWavesEffect>
+                <a href="https://www.instagram.com/oohlalava" class="nav-link"><i class="fa fa-instagram"></i></a>
+            </li>
+            <!-- ON SALE BUTTON -->
+            <button id="sale-button" class="btn btn-danger btn-sm pl-4" mdbWavesEffect>ON SALE !</button>
+        </ul>
+
+        <!-- CART BUTTON  -->
+        <ul class="navbar-nav nav-flex-icons">
+            <li>
+                <div class="btn-group" dropdown #dropdown="bs-dropdown">
+                    <button routerLink="/shopping-cart" *ngIf="cart$ | async as cart" class="btn btn-blue-grey btn-sm dropdown-toggle waves-light" mdbWavesEffect (mouseenter)="dropdown.toggle()" (mouseleave)="dropdown.toggle()">
+                                        Cart {{ cart.totalItemsCount }} <i class="fa fa-shopping-cart"></i>
+                                            </button>
+
+                    <div class="dropdown-menu dropdown-primary">
+
+                        <div class="divider dropdown-divider"></div>
+                        <ng-container *ngIf="cart$ | async as cart">
+                            <p class="pl-3">You have {{ cart.totalItemsCount }} items in your shopping cart. </p>
+                            <div class="card">
+                                <table class="table">
+                                    <tbody>
+                                        <tr *ngFor="let item of cart.items">
+                                            <td>
+                                                <div [style.backgroundImage]="'url(' + item.imgUrl + ')'" class="thumbnail">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {{ item.title }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th class="text-right" style="font-weight: 400">Total </th>
+                                            <th class="text-right" style="font-weight: 400 !important"> {{ cart.totalPrice | currency: 'AUD' }}</th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- CHECKOUT BUTTON/BOTTOM OF CART BUTTON -->
+                            <!-- <a routerLink="/check-out" *ngIf="cart.items.length" class="btn btn-danger btn-sm">Checkout <i class="fa fa-mail-forward"></i></a> -->
+                        </ng-container>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </links>
+</mdb-navbar>

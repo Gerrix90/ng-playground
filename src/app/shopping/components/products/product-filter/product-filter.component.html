@@ -1,0 +1,19 @@
+<div class="sticky-top">
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" [class.active]="!category" routerLink="/">All Categories</a>
+        <a *ngFor="let c of categories$ | async" routerLink="/" [queryParams]="{ category: c.$key }" class="list-group-item list-group-item-action" [class.active]="category === c.$key">
+          {{ c.name }}
+        </a>
+    </div>
+</div>
+
+
+
+<!-- <div class="sticky-top">
+    <div class="row row1 scroll-pane">
+        <label class="checkbox"><input type="checkbox" name="checkbox" checked="" [class.active]="!category" routerLink="/"><i></i>All Categories</label>
+        <a *ngFor="let c of categories$ | async" routerLink="/" [queryParams]="{ category: c.$key }" class="list-group-item list-group-item-action" [class.active]="category === c.$key">
+            {{ c.name }}
+          </a>
+    </div>
+</div>  -->

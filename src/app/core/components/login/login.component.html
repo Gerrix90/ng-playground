@@ -1,0 +1,38 @@
+<div class="form-container">
+
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <img src="assets/images/lock.svg" id="lock">
+        <a routerLink="/home" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </a>
+        <h2>Secure</h2><br>
+        <h4>Login</h4>
+
+        <div class="form-group">
+
+            <input #name="ngModel" name="email" [(ngModel)]="shipping.email" type="text" class="form-control" required placeholder="email@address.com">
+
+            <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+                <div *ngIf="name.errors.required">Email address is required.</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+
+            <input #name="ngModel" name="password" [(ngModel)]="shipping.password" type="text" class="form-control" placeholder="password" required>
+
+            <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+                <div *ngIf="name.errors.required">Password is required.</div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-danger">SIGN IN <i class="fa fa-arrow-right"></i></button>
+        <p class="text-center">or Sign in with:</p>
+        <button id="google" (click)="login()" class="btn btn-primary"><i class="fa fa-google" aria-hidden="true"></i>    Login with Google</button>
+        <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+
+    </form>
+    <div id="spacer">
+        <h4>Contact email Oohlalava@yahoo.com</h4>
+    </div>
+</div>
