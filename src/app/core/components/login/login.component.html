@@ -1,6 +1,4 @@
-<div class="form-container">
-
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<!-- <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
         <img src="assets/images/lock.svg" id="lock">
         <a routerLink="/home" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
@@ -10,7 +8,7 @@
 
         <div class="form-group">
 
-            <input #name="ngModel" name="email" [(ngModel)]="shipping.email" type="text" class="form-control" required placeholder="email@address.com">
+            <input id="email" #name="ngModel" name="email" [(ngModel)]="shipping.email" type="text" class="form-control" required placeholder="email@address.com">
 
             <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
                 <div *ngIf="name.errors.required">Email address is required.</div>
@@ -19,14 +17,14 @@
         <br>
         <div class="form-group">
 
-            <input #name="ngModel" name="password" [(ngModel)]="shipping.password" type="text" class="form-control" placeholder="password" required>
+            <input id="password" #name="ngModel" name="password" [(ngModel)]="shipping.password" type="text" class="form-control" placeholder="password" required>
 
             <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
                 <div *ngIf="name.errors.required">Password is required.</div>
             </div>
         </div>
         <br>
-        <button class="btn btn-danger">SIGN IN <i class="fa fa-arrow-right"></i></button>
+        <button (click)="loginAnonymous()" class="btn btn-danger">SIGN IN <i class="fa fa-arrow-right"></i></button>
         <p class="text-center">or Sign in with:</p>
         <button id="google" (click)="login()" class="btn btn-primary"><i class="fa fa-google" aria-hidden="true"></i>    Login with Google</button>
         <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
@@ -35,4 +33,97 @@
     <div id="spacer">
         <h4>Contact email Oohlalava@yahoo.com</h4>
     </div>
+</div>  -->
+
+
+<!-- New Login
+    <div class="container">
+        <button class="btn btn-unique mt-5" (click)="loginAnonymous()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+        <div class="card" style="width: 28rem;">
+            <div class="card-body">
+                <form [formGroup]="loginForm">
+                    <div class="form-header default-color">
+                        <h3>
+                            <i class="fa fa-lock"></i> Login:</h3>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix grey-text"></i>
+                        <input placeholder="Your email" type="text" formControlName="defaultFormEmail" id="defaultForm-email" class="form-control" mdbInputDirective>
+
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fa fa-lock prefix grey-text"></i>
+                        <input placeholder="Your password" type="password" formControlName="defaultFormPass" id="defaultForm-pass" class="form-control" mdbInputDirective>
+
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-default waves-light" mdbWavesEffect value="Login">
+
+                        <button (click)="login()" class="btn btn-primary"><i class="fa fa-google" aria-hidden="true"></i>    Login with Google</button>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="options">
+                            <p>Not a member?
+                                <a href="#">Sign Up</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Anonymous Login 
+    <div class="row columns">
+        <button class="btn btn-danger" (click)="loginAnonymous()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+        <button *ngIf="(user$ | async)?.uid">Logout</button>
+
+        <input type="text" id="message" *ngIf="(user$ | async)?.uid" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+        <div id="details-container">
+            <p *ngFor="let item of items | async"><img src="../assets/images/pin.svg">{{item.message}}</p>
+        </div>
+    </div>  -->
+
+<!-- MD-Bootstrap-->
+
+<!-- Login form -->
+<!--Header-->
+<div class="container">
+    <div class="form-header default-color">
+        <a routerLink="/home" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+            <span class="x" aria-hidden="true">×</span>
+        </a>
+        <h3>
+            <i class="fa fa-lock"></i> Login:</h3>
+
+    </div>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" [formGroup]="loginForm">
+
+
+        <div class="md-form">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input placeholder="Your email" type="text" formControlName="defaultFormEmail" id="defaultForm-email" class="form-control" mdbInputDirective>
+
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-lock prefix grey-text"></i>
+            <input placeholder="Your password" type="password" formControlName="defaultFormPass" id="defaultForm-pass" class="form-control" mdbInputDirective>
+
+        </div>
+
+
+    </form>
+
+    <div class="text-center">
+        <button (click)="loginAnonymous()" class="btn btn-default">SIGN IN <i class="fa fa-paper-plane-o ml-1"></i></button><br>
+        <p class="text-center p-0">or Sign in with:</p>
+        <button id="google" (click)="login()" class="btn btn-primary"><i class="fa fa-google" aria-hidden="true"></i>    Login with Google</button>
+        <br>
+        <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+    </div>
 </div>
+<!-- Login form -->

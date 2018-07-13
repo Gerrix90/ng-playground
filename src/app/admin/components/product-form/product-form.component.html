@@ -39,6 +39,13 @@ This form returns as a json object into firebase -->
                             Category is required.
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label><br>
+                        <input #imgUrl="ngModel" [(ngModel)]="product.description" name="description" id="description" type="text" class="form-control">
+
+                    </div>
+
                     <div class="form-group">
                         <label for="imageUrl">Image Url</label><br>
                         <input #imgUrl="ngModel" [(ngModel)]="product.imgUrl" name="imgUrl" id="imgUrl" type="text" class="form-control" required url>

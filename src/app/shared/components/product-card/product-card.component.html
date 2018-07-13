@@ -1,4 +1,4 @@
-<!-- Displays the CARD -->
+<!-- Displays all the SHOP CARDS -->
 <div *ngIf="product.title" class="card">
 
     <!--Card image-->
@@ -7,7 +7,11 @@
     <!--Card content-->
     <div class="card-body">
         <!--Title-->
-        <h4 class="card-title">{{ product.title }}</h4>
+        <a routerLink="product/details" class="card-title">{{ product.title }}</a>
+
+        <!-- Product Description -->
+        <p class="card-text">{{ product.description }}</p>
+
         <!--Text-->
         <p class="card-text">{{ product.price | currency:'AUD'}}</p>
 

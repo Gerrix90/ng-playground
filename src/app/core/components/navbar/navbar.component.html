@@ -1,9 +1,17 @@
 <!-- Navbar -->
 
-<mdb-navbar SideClass="navbar navbar-expand-lg">
+<mdb-navbar SideClass="navbar navbar-expand-lg" [containerInside]="true">
     <logo>
         <a class="navbar-brand" routerLink="/"><img src="/assets/img/logo_144.png" height="60" width="60"></a>
     </logo>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
     <links>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active waves-light" mdbWavesEffect>
@@ -39,7 +47,11 @@
                     <a class="dropdown-item waves-light" (click)="logout()" mdbWavesEffect>Log Out</a>
                 </div>
             </li>
-            <!-- CART BUTTON 
+        </ul>
+    </links>
+
+</mdb-navbar>
+<!-- CART BUTTON 
             <li>
                 <div class="btn-group" dropdown #dropdown="bs-dropdown">
                     <button routerLink="/shopping-cart" *ngIf="cart$ | async as cart" class="btn btn-danger btn-sm dropdown-toggle waves-light" mdbWavesEffect (mouseenter)="dropdown.toggle()">
@@ -76,11 +88,8 @@
                                 </table>
                             </div>
                             <!-- CHECKOUT BUTTON/BOTTOM OF CART BUTTON -->
-            <!-- <a routerLink="/check-out" *ngIf="cart.items.length" class="btn btn-danger btn-sm">Checkout <i class="fa fa-mail-forward"></i></a> 
+<!-- <a routerLink="/check-out" *ngIf="cart.items.length" class="btn btn-danger btn-sm">Checkout <i class="fa fa-mail-forward"></i></a> 
                         </ng-container>
                     </div>
                 </div>
             </li> -->
-        </ul>
-    </links>
-</mdb-navbar>

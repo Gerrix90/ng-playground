@@ -12,6 +12,7 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     ProductFilterComponent,
     ShoppingCartSummaryComponent,
     ShippingFormComponent,
+    ProductDetailComponent,
   ]
 })
 export class ShoppingModule { }

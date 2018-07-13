@@ -1,9 +1,10 @@
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
-import { AuthService } from 'shared/services/auth.service';
-import { Component, OnInit, OnDestroy, Input} from '@angular/core';
-import { ShoppingCart } from 'shared/models/shopping-cart';
 import { Subscription } from 'rxjs/Subscription';
+import { ShoppingCart } from 'shared/models/shopping-cart';
+import { AuthService } from 'shared/services/auth.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -21,8 +22,18 @@ export class LoginComponent implements OnInit, OnDestroy {
   userSuscription: Subscription;
   userId: string;
   uid: string;
+  items: FirebaseListObservable<any[]>;
+  msgVal: string;
 
-  constructor(private auth: AuthService ) {
+   modalForm: FormGroup;
+ 
+  constructor(private auth: AuthService,  public fb: FormBuilder ) {
+     this.modalForm = fb.group({
+      modalFormNameEx: ['', Validators.required],
+      modalFormEmailEx: ['', [Validators.email, Validators.required]],
+      modalFormSubjectEx: ['', Validators.required],
+      modalFormTextEx: ['', Validators.required]
+    }); 
 }
 
 onSubmit(form: NgForm) {
@@ -37,6 +48,10 @@ login() {
   this.auth.login();
   }
 
+   loginAnonymous() {
+    this.auth.loginAnonymous();
+  } 
+
   ngOnInit() {
     this.userSuscription = this.auth.user$.subscribe(user => this.userId = user.uid);
   }
@@ -44,6 +59,11 @@ login() {
   ngOnDestroy() {
    this.userSuscription.unsubscribe();
   } 
+
+   Send(desc: string) {
+    this.items.push({ message: desc});
+    this.msgVal = '';
+} 
 
 }
 

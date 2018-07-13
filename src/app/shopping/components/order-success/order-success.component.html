@@ -1,3 +1,13 @@
-<p>
-  order-success works!
-</p>
+<div class="container mt-5">
+    <div class="card">
+        <h2 class="mb-5 text-center">Order success</h2>
+        <h4 class="pl-5 mb-4">Secure Checkout</h4>
+
+        <ul *ngFor="let order of orders$ | async">
+            <li style="text-align: center;">Thank you <strong>{{ order.shipping.name }}</strong> for purchasing from Ooh La Lava, your item will be shipped to <strong>{{ order.shipping.addressLine1 }}, {{ order.shipping.city }} {{ order.shipping.state }}</strong> and be dispatched within
+                24 hours.</li>
+        </ul>
+        <p class="mt-5 text-center" style="color:#afa9a9;">Subscribe to email our list for discounts offers, latest news and more...</p>
+        <button class="btn btn-default">Subscribe</button>
+    </div>
+</div>

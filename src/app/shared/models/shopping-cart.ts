@@ -8,7 +8,7 @@ export class ShoppingCart {
    this.itemsMap = itemsMap || {};
    // get firebase product ids to display as an array- to itterate shopping-cart.component.html
     for (let productId in itemsMap) {
-    let item = itemsMap[productId];
+    let item = itemsMap[productId]; 
     this.items.push(new ShoppingCartItem({ ...item, $key: productId }));
    }
  }

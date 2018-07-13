@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { OrderService } from 'shared/services/order.service';
+import { AuthService } from 'shared/services/auth.service';
 
 @Component({
   selector: 'app-order-success',
   templateUrl: './order-success.component.html',
   styleUrls: ['./order-success.component.scss']
 })
-export class OrderSuccessComponent implements OnInit {
 
-  constructor() { }
+export class OrderSuccessComponent{
+  orders$;
 
-  ngOnInit() {
-  }
-
+  constructor(private authService: AuthService, private orderService: OrderService) {
+    this.orders$ = authService.user$.switchMap(u => orderService.getOrdersByUser(u.uid));
+   }
 }
+
+

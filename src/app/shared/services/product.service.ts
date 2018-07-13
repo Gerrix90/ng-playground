@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 
 // Saving Products in firebase database service
@@ -30,5 +32,9 @@ export class ProductService {
       delete(productId) {
         return this.db.object('/products/' + productId).remove();
       }
+      // new JULY
+      getProductById(key: string) {
+        this.db.object('products/' + key);
+        }
 
     }

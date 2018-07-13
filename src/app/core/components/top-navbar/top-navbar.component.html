@@ -1,4 +1,4 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg elegant-color-dark">
+<mdb-navbar id="top-nav" SideClass="navbar navbar-expand-lg elegant-color-dark">
     <links>
         <!-- SOCIAL MEDIA ICONS -->
         <ul class="navbar-nav mr-auto">
@@ -16,7 +16,7 @@
         </ul>
 
         <!-- CART BUTTON  -->
-        <ul class="navbar-nav nav-flex-icons">
+        <ul id="cart-button" class="navbar-nav nav-flex-icons">
             <li>
                 <div class="btn-group" dropdown #dropdown="bs-dropdown">
                     <button routerLink="/shopping-cart" *ngIf="cart$ | async as cart" class="btn btn-blue-grey btn-sm dropdown-toggle waves-light" mdbWavesEffect (mouseenter)="dropdown.toggle()" (mouseleave)="dropdown.toggle()">

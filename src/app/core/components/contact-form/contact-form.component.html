@@ -5,63 +5,67 @@
 
 
 <div class="container">
-    <div class="modal-header primary-color white-text">
-        <h4 class="title">
-            <i class="fa fa-pencil"></i> Contact form</h4>
-        <a routerLink="/home" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </a>
-    </div>
-    <div class="card">
-        <form #f="ngForm" (ngSubmit)="submit(f)">
-            <div ngModelGroup="contact">
-                <div class="form">
-                    <label for="firstName">Name</label>
-                    <input required minlength="2" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
-                    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
-                        <div *ngIf="firstName.errors.required">
-                            First name is required.</div>
-                        <div *ngIf="firstName.errors.minlength">
-                            First name min {{ firstName.errors.minlength.requiredLength }} characters.
+    <div class="card-body">
+        <div class="modal-header primary-color white-text">
+            <h4 class="title">
+                <i class="fa fa-pencil"></i> Contact form</h4>
+            <a routerLink="/home" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </a>
+        </div>
+        <div class="card">
+            <form #f="ngForm" (ngSubmit)="submit(f)">
+                <div ngModelGroup="contact">
+                    <div class="form">
+                        <label for="firstName">Name</label>
+                        <input required minlength="2" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+                        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+                            <div *ngIf="firstName.errors.required">
+                                First name is required.</div>
+                            <div *ngIf="firstName.errors.minlength">
+                                First name min {{ firstName.errors.minlength.requiredLength }} characters.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="comment">Message</label>
-                    <textarea ngModel name="message" id="comment" cols="30" rows="10" class="form-control"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="comment">Message</label>
+                        <textarea ngModel name="message" id="comment" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
 
-                <!-- Check Box  -->
-                <div class="checkbox">
-                    <label>
+                    <!-- Check Box 
+                    <div class="checkbox">
+                        <label>
                 <input type="checkbox" ngModel name="isSubsribed"> Subscribe to mailing list
               </label>
-                </div>
+                    </div>  -->
 
-                <!-- Radio Buttons -->
+                    <!-- Radio Buttons 
                 <div *ngFor="let method of contactMethod" [value]="method.id" class="div radio">
                     <label><input ngModel type="radio" name="contactMethod" value="1">{{ method.name }}</label>
-                </div>
+                </div> -->
 
-                <!-- Contact Method -->
-                <div class="form-group">
-                    <label for="contactMethod">Contact Method</label>
-                    <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+
+                    <div class="form-group">
+                        <label for="contactMethod">Contact Method</label>
+                        <select ngModel name="contactMethod" id="contactMethod" class="form-control">
                   <option value=""></option>
                <option *ngFor="let method of contactMethod" [value]="method.id">{{ method.name }}</option>
               </select>
-                </div>
-                <!-- <p> Returns the value in json on screen (for developing check) 
+                    </div>
+                    <!-- <p> Returns the value in json on screen (for developing check) 
               <p>{{ f.value | json }}</p>
             -->
 
-                <button class=" btn btn-primary" [disabled]="!f.valid">Submit</button>
-            </div>
+                    <button class=" btn btn-primary" [disabled]="!f.valid">Submit</button>
+                </div>
 
-        </form>
+            </form>
+        </div>
     </div>
-
     <!-- All you need to set is the ngModel name="firstName" to use the template driven approach
      using the required, minlength maxlength and pattern HTML attributes, for multiple validation constraints on a input field. Separate div's.
 
 -->
+
+
+    <!--Modal: Contact form-->

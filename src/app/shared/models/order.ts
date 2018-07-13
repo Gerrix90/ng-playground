@@ -15,7 +15,7 @@ constructor(public userId: string, public shipping: any, shoppingCart: ShoppingC
       },
       quantity: i.quantity,
       totalPrice: i.totalPrice
-    }
-  })
+    };
+  });
  }
 }
