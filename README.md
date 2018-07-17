@@ -1,8 +1,8 @@
 #  Angular 5 learning playground
-<<<<<<< HEAD
+## Checkout the branch live demo
+
 ## Front to back series
 
-<<<<<<< HEAD
 ### from a Beginner to Advance!
 #### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authenttication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
 
@@ -87,7 +87,7 @@ export class YourComponenet {
 =======
 ### Learn Angular from a Beginner to Advance!
 #### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authentication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
->>>>>>> 3c49c26dfa06f0d1ab1994866b38d4956b83e7a8
+
 =======
 ## Building a ecommerce shop
 
@@ -175,4 +175,4 @@ export class YourComponenet {
 ```
 
 
->>>>>>> 1fd81f820da6fb6c19f3e9f0e8ae0340d2a08ee2
+
