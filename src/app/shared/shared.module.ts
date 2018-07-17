@@ -16,6 +16,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { CustomFormsModule } from 'ng2-validation';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -30,6 +31,7 @@ import { CustomFormsModule } from 'ng2-validation';
   declarations: [
     ProductCardComponent,
     ProductQuantityComponent,
+  
   ],
   // export all modules to all other components
 exports: [

@@ -36,7 +36,7 @@
             <!-- Dropdown Login -->
             <li class="nav-item dropdown" dropdown *ngIf="appUser; else anonymousUser">
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-                      {{ appUser.name }}<span class="caret"></span></a>
+                      {{ appUser.name }}<span class="caret"> My Account</span></a>
                 <div *dropdownMenu id="login-menu" class="dropdown-menu dropdown dropdown-primary" role="menu">
                     <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/my/orders">My Orders</a>
                     <ng-container *ngIf="appUser.isAdmin">

@@ -13,12 +13,14 @@ import { OrderSuccessComponent } from './components/order-success/order-success.
 import { ProductsComponent } from './components/products/products.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductListComponent } from './component/product-list/product-list.component';
 
 @NgModule({
   imports: [
     SharedModule,
     RouterModule.forChild([
       { path: 'products', component: ProductsComponent},
+      { path: 'product/:id', component: ProductDetailComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent},
       { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
       { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
@@ -35,6 +37,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ShoppingCartSummaryComponent,
     ShippingFormComponent,
     ProductDetailComponent,
+    ProductListComponent,
   ]
 })
 export class ShoppingModule { }
