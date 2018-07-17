@@ -13,5 +13,8 @@
 ## Screen shots
 ![](src/assets/screenshots/ewd01.png)
 
+![](src/assets/screenshots/ewd02.png)
+
+![](src/assets/screenshots/ewd03.png)
 
 
