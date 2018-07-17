@@ -1,5 +1,5 @@
 #  Angular 5 learning playground
-## Checkout the branch live demo
+## Checkout the branch [live demo](https://eshop-a6d13.firebaseapp.com/home)
 
 ## Front to back series
 
@@ -84,18 +84,7 @@ export class YourComponenet {
      });
     }
 }
-=======
-### Learn Angular from a Beginner to Advance!
-#### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authentication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
 
-=======
-## Building a ecommerce shop
-
-### Project 
-#### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authentication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
-
-## routerLink
-### for simple routes 
 ```html
 <a routerLink="/home">Home</a>
 ```
