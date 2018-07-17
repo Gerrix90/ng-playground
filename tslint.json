@@ -10,7 +10,7 @@
       true,
       "check-space"
     ],
-    "curly": true,
+    "curly": false,
     "deprecation": {
       "severity": "warn"
     },
@@ -106,6 +106,9 @@
         "property-declaration": "nospace",
         "variable-declaration": "nospace"
       }
+    ],
+    "trailing-whitespace": [
+      false,
     ],
     "unified-signatures": true,
     "variable-name": false,

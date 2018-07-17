@@ -1,12 +1,16 @@
-#  Angular 5 learning playground
+#  Angular 5 ecommerce eShop project
+## view [demo here](https://eshop-a6d13.firebaseapp.com/home)
 
-=======
-### Learn Angular from a Beginner to Advance!
-#### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authentication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
->>>>>
-=======
-## Building a ecommerce shop
+### An Angular 5 ecommerce app that allows you to:
+### 1. Login anonymously or with your google account.
+### 2. Manage and add products as admin user only.
+### 3. Add products to cart, use checkout and shipping pages.
+### 4. Intergrated with firebase for backend.
 
-### Project 
-#### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authentication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
+
+## Using MD-Bootstrap for styles.
+
+
+
+
 

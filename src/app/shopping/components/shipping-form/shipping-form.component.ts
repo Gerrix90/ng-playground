@@ -5,6 +5,7 @@ import { AuthService } from 'shared/services/auth.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Shipping } from 'shared/models/shipping';
 
 @Component({
   selector: 'app-shipping-form',
@@ -13,11 +14,12 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 })
 export class ShippingFormComponent implements OnInit, OnDestroy {
   @Input('cart') cart: ShoppingCart;
-  shipping = {};
+  shipping: Shipping;
   userSuscription: Subscription;
   userId: string;
+ 
 
-  constructor(private router: Router,
+constructor(private router: Router,
     private orderService: OrderService, 
     private authServive: AuthService) {  }
 

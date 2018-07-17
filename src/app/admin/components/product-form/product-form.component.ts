@@ -3,6 +3,7 @@ import { CategoriesService } from 'shared/services/categories.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/take';
+import { Product } from 'shared/models/product';
 
 
 
@@ -13,9 +14,9 @@ import 'rxjs/add/operator/take';
 })
 export class ProductFormComponent implements OnInit {
 categories$;
-product = {};
-description: string;
 id;
+product: Product;
+
   constructor(
     private router: Router, 
     private route: ActivatedRoute,

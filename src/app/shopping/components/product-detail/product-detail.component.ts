@@ -21,6 +21,7 @@ export class ProductDetailComponent{
   category: string;
   cart: any;
   subscription: Subscription;
+  cart$;
   
   constructor(
     private cartService: ShoppingCartService,
