@@ -1,5 +1,5 @@
 #  Angular 5 learning playground
-## Checkout the branch [live demo](https://eshop-a6d13.firebaseapp.com/home)
+## Checkout the branch [live demo](https://eshop-a6d13.firebaseapp.com/home) ecommerce store
 
 ## Front to back series
 
