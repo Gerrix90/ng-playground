@@ -19,7 +19,11 @@ export class ShippingFormComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router,
     private orderService: OrderService, 
+<<<<<<< HEAD
     private authServive: AuthService) { }
+=======
+    private authServive: AuthService) {  }
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76
 
   ngOnInit() {
     this.userSuscription = this.authServive.user$.subscribe(user => this.userId = user.uid);

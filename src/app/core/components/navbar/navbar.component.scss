@@ -2,8 +2,62 @@ a {
     color: #fff;
 }
 
+<<<<<<< HEAD
 .btn-danger {
     border: 0.2em solid #ed193a;
     border-radius: 10px;
     padding: 8px 15px;
+=======
+.navbar-brand {
+    color: #08080b;
+}
+
+links {
+    margin-left: 200px;
+}
+
+.nav-link {
+    color: #232323;
+    font-size: 14px;
+    padding-left: 40px !important;
+}
+
+#sale-button {
+    all: unset;
+}
+
+button.btn-danger {
+    border: 0.2em solid #ed193a;
+    border-radius: 10px;
+    padding: 0;
+    width: 70px;
+    height: 35px;
+    margin-top: auto;
+}
+
+a.btn {
+    color: #fff;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button.navbar-toggler {
+    float: right;
+}
+
+#login:hover {
+    color: #424242 !important;
+    .fa:hover {
+        color: #424242 !important;
+    }
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76
 }

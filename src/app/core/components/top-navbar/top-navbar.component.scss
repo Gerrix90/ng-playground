@@ -1,0 +1,30 @@
+nav.navbar {
+    background-color: #08080b;
+    padding: 0;
+    margin-top: -20px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size: cover;
+}
+
+.fa {
+    color: #fff;
+}
+
+.btn-danger {
+    border: 0.2em solid #ed193a;
+    border-radius: 10px;
+}
+
+.btn-blue-grey {
+    border: 0.2em solid #37474F;
+    border-radius: 10px;
+    padding: 0;
+    width: 70px;
+    height: 35px;
+    margin-top: auto;
+}

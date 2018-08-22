@@ -9,6 +9,7 @@ import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+<<<<<<< HEAD
 import { ContactFormComponent } from './core/pages/contact-form/contact-form.component';
 import { PostsComponent } from './http/posts/posts.component';
 import { BlogComponent } from './navagation/blog/blog.component';
@@ -16,17 +17,27 @@ import { NavagationComponent } from './navagation/navagation.component';
 import { ShoppingModule } from './shopping/shopping.module';
 
 
+=======
+import { ContactFormComponent } from './core/components/contact-form/contact-form.component';
+import { ShoppingModule } from './shopping/shopping.module';
+import { TopNavbarComponent } from './core/components/top-navbar/top-navbar.component';
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
+<<<<<<< HEAD
     PostsComponent,
     NavagationComponent,
     BlogComponent,
     
    ],
+=======
+    TopNavbarComponent,
+    ],
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76
   imports: [
     BrowserModule,
     SharedModule,

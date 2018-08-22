@@ -7,6 +7,10 @@ import { AuthGuard } from 'shared/services/auth-guard.service';
 
 import { SharedModule } from './../shared/shared.module';
 import { CheckOutComponent } from './components/check-out/check-out.component';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -19,7 +23,11 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
       { path: 'products', component: ProductsComponent},
       { path: 'shopping-cart', component: ShoppingCartComponent},
       { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
+<<<<<<< HEAD
       { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard]},
+=======
+      { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76
       { path: 'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuard]},
     ])
   ],

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 
 
@@ -9,3 +10,117 @@
     background-color: #37474F;
     border-color: #263238;
 }
+=======
+    /* You can add global styles to this file, and also import other style files */
+    /* @import "~bootstrap/dist/css/bootstrap.css" */
+    
+    .list-group-item.active {
+        z-index: 2;
+        color: #fff;
+        background-color: #37474F;
+        border-color: #263238;
+    }
+    
+    .list-group-item {
+        width: 150px;
+    }
+    
+    button.navbar-toggler {
+        color: #08080b !important;
+    }
+    
+    @media (max-width:400px) {
+        .col-3 {
+            color: #808080;
+            margin-top: 4em;
+        }
+        .list-group-item {
+            margin-top: 0px;
+            padding-top: 0;
+            font-weight: 400;
+        }
+        .list-group-item.active {
+            z-index: 2;
+            color: #808080;
+            background-color: #f8f8f8;
+            border-color: #3f51b5;
+        }
+        .card-text {
+            color: #FFAF02 !important;
+            font-size: 1em;
+        }
+    }
+    
+    .thumbnail {
+        box-shadow: 0 0 0 0;
+    }
+    /* -------------------- */
+    
+    .error {
+        background: #f1f0ef;
+        padding: 1em;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    #goback {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: .8em;
+        color: #3B8598;
+    }
+    
+    #goback span {
+        font-size: 1em;
+    }
+    
+    .loading {
+        width: 30px;
+        height: 30px;
+        border: 5px solid #ccc;
+        position: fixed;
+        left: 50%;
+        margin-left: -20px;
+        top: 50%;
+        margin-top: -20px;
+        border-radius: 50%;
+    }
+    
+    .loading:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 10px;
+        background: #E2E4E6;
+        top: 10px;
+        left: -5px;
+        animation: spin 1.2s infinite;
+    }
+    
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @media (max-width: 400px) {
+        body {
+            padding-top: 1.2em;
+        }
+        .form-container {
+            padding: 2.2em 0;
+            width: 90%;
+            margin-left: -45%;
+            padding-bottom: 90px;
+        }
+        button {
+            font-size: 1em;
+        }
+        #lock {
+            width: 40%;
+            margin: 1.5em auto 4em auto;
+            display: block;
+        }
+    }
+>>>>>>> 987ba9ac6eedf280e254daf36badeaa3a222cd76

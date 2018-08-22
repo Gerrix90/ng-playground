@@ -9,6 +9,8 @@ import 'rxjs/add/observable/of';
 import { ActivatedRoute } from '@angular/router';
 
 
+
+
 @Injectable()
 export class AuthService {
   user$: Observable<firebase.User>;
@@ -16,9 +18,24 @@ export class AuthService {
   constructor( 
       private userService: UserService,
       private afAuth: AngularFireAuth,
-      private route: ActivatedRoute) {
+      private route: ActivatedRoute,
+     ) {
     this.user$ = afAuth.authState;
    }
+
+
+   signUp(email: string, password: string) {
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch();
+      console.error();
+      }
+
+      loginEmail(email: string, password: string) {
+        return new Promise<any>((resolve, reject) => {
+          firebase.auth().signInWithEmailAndPassword(email, password)
+          .then( userData =>  resolve(userData),
+          err => reject (err));
+        });
+      }
 
   login() {
     const returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
@@ -26,6 +43,7 @@ export class AuthService {
     
     this.afAuth.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
   }
+
 
  logout() {
   this.afAuth.auth.signOut();
