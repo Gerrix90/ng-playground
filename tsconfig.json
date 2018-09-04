@@ -20,7 +20,11 @@
       "shared/*": [
         "app/shared/*"
       ]
-    }
+    },
+    "module": "es2015"
   },
-  "include": ["node_modules/angular-bootstrap-md/**/*.ts",  "src/**/*.ts"] 
+  "include": [
+    "node_modules/angular-bootstrap-md/**/*.ts",
+    "src/**/*.ts"
+  ]
 }
