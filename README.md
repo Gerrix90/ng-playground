@@ -1,10 +1,8 @@
 #  Angular 5 eCommerce shop
 ## Checkout the branch [live demo](https://eshop-a6d13.firebaseapp.com/home) ecommerce store
 
-## Front to back series
 
-
-### from a Beginner to Advance!
+### Angular playground
 #### Learn Angular fundamentals, data and handling events, building re-usable components, directives, template driven forms, reactive forms, consuming http services, routing and navagation, authenttication and authorization, deployment, building apps with firebase, animations, angular material, redux, unit testing, intergration testing and building a ecommerce store.
 
 ## All about routes and the routerLink 
