@@ -30,7 +30,7 @@
 ## Getting the route parameter
 ```typescript
 ngOnit() {
-  // Getting the rquired params from routes
+  // Getting the required params from routes
      this.route.params.subscribe( 
        params => this.posts$ = params.id);
     })
